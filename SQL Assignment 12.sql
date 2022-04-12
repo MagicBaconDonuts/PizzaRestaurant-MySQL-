@@ -60,11 +60,7 @@ join orders o on o.customer_id = c.customer_id
 join pizzas p on p.pizza_id = o.order_id
 group by customer;
 -- Q5
-SELECT customer as 'Customer', sum(price) as Total FROM customer c
-join orders o on o.customer_id = c.customer_id
-join pizzas p on p.pizza_id = o.order_id
-group by date_time;
 select customer as Customer, date_time as 'Date', sum(price) as 'Total' from customer c
 join orders o on o.customer_id = c.customer_id
 join pizzas p on p.pizza_id = o.order_id
-group by order_id;
+group by date_time;
